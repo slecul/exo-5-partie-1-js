@@ -14,9 +14,18 @@
         function valeur() {
           var numberOne = document.getElementById('firstNumber').value;
           var numberTwo = document.getElementById('secondNumber').value;
-          var result = Math.floor(numberOne)*numberTwo;
-          alert(result);
-}
+          if(!isNaN(numberOne) && !isNaN(numberTwo)){
+            if(Number(numberOne) % 1 !== 0 && Number(numberTwo) % 1 !==0){
+              var result = Math.trunc(numberOne)*numberTwo;
+              alert(result);
+            } else {
+              alert('Attention, ce sont des nombres entiers!')
+            }
+          }else{
+            alert('Attention, ce ne sont pas des nombers!')
+          }
+
+        }
         </script>
 
     </body>
